@@ -40,7 +40,7 @@ let telefono_nuevo = new Telefonos("fijo", "916062323");
 let email_nuevo = new Mails("Trabajo", "trabajo@gmail.com");
 
 for (let i = 0; i < arrayPersonas.length; i++) {
-    const dniPersona = arrayPersonas[i].getDni();
+    const dniPersona:string = arrayPersonas[i].getDni();
     if(dni_elegido == dniPersona){
         arrayPersonas[i].setDireccion(direccion_nueva);
         arrayPersonas[i].setMail(email_nuevo);
