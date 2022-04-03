@@ -23,15 +23,18 @@ let persona_3 = new Persona("Marcos", "Garcia Fernandez", 31, "49054808S","mascu
 
 let arrayPersonas: Persona[] = [persona_1, persona_2, persona_3];
 
-
-for (let i = 0; i < arrayPersonas.length; i++) {
-    console.log('------------- Persona ' + (i + 1) + '-------------');
-    console.log(arrayPersonas[i].mostrarDatosPersona());
+function showInfo(arrayPersonas: Array<Persona>): void {
+    for (let i = 0; i < arrayPersonas.length; i++) {
+        console.log('------------- Persona ' + (i + 1) + '-------------');
+        console.log(arrayPersonas[i].mostrarDatosPersona());
+    }
 }
+
+showInfo(arrayPersonas);
 
 // modificar direccion, mail y persona buscando DNI
 
-let dni_elegido = "49054806M";
+let dni_elegido:string = "49054806M";
 let direccion_nueva = new Direcciones("Castilla", "10","3", "B", "28940", "Fuenlabrada", "Madrid");
 let telefono_nuevo = new Telefonos("fijo", "916062323");
 let email_nuevo = new Mails("Trabajo", "trabajo@gmail.com");
@@ -47,7 +50,4 @@ for (let i = 0; i < arrayPersonas.length; i++) {
 
 console.log('----------DATOS CAMBIADOS ------------------');
 
-for (let i = 0; i < arrayPersonas.length; i++) {
-    console.log('------------- Persona ' + (i + 1) + '-------------');
-    console.log(arrayPersonas[i].mostrarDatosPersona());
-}
+showInfo(arrayPersonas);
